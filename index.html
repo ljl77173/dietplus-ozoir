@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dietplus Ozoir - Coach Laurent</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes writing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    .typing {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid;
+      animation: writing 3s steps(30, end) forwards;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-delay {
+      animation: fadeInUp 1s ease-out 1 forwards;
+      animation-delay: 3.2s;
+    }
+    .scroll-fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .scroll-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-green-600 text-white p-8 shadow-md flex flex-col items-center gap-4 relative">
+    <!-- Fanion -->
+    <img src="fanion-13ans.png" alt="13 ans à vos côtés" class="absolute top-2 left-2 h-14">
+
+    <!-- Logo -->
+    <img src="logo-dietplus.png" alt="Logo Dietplus" class="absolute top-2 right-2 h-14">
+
+    <!-- Texte centré -->
+    <div class="text-center">
+      <h1 class="text-4xl font-bold">Dietplus Ozoir</h1>
+      <p class="text-xl">Avec Coach Laurent</p>
+    </div>
+
+    <!-- Photo de Laurent -->
+    <img src="coach-laurent.jpg" alt="Coach Laurent" class="h-28 w-28 rounded-full border-4 border-white shadow-lg object-cover">
+  </header>
+
+  <!-- Accueil -->
+  <section class="p-6 text-center">
+    <h2 class="text-2xl font-semibold mb-2">Bienvenue chez Dietplus Ozoir</h2>
+    <p class="max-w-xl mx-auto">Rejoignez une méthode personnalisée et naturelle pour atteindre vos objectifs de perte de poids, avec un accompagnement bienveillant et motivant.</p>
+  </section>
+
+  <!-- Qui suis-je -->
+  <section class="bg-white p-6">
+    <h2 class="text-2xl font-semibold mb-2 text-center">Qui suis-je ?</h2>
+    <p class="text-center mb-6">Je suis Laurent, Coach en nutrition avec plus de 10 ans d'expérience. Mon objectif : vous aider à retrouver forme, énergie et confiance en vous grâce à la méthode Dietplus.</p>
+  </section>
+
+  <!-- Résultats -->
+  <section class="p-6 bg-gray-100">
+    <h2 class="text-2xl font-semibold mb-2 text-center">Résultats de nos clients</h2>
+    <p class="text-center mb-6">Découvrez les transformations incroyables de nos clients avant et après leur accompagnement :</p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition transform duration-300">
+        <img src="avantapres-herbin.jpg" alt="Maryvonne -10kg" class="rounded mb-2">
+        <p class="text-center font-semibold">Maryvonne -10 kg</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition transform duration-300">
+        <img src="avantapres-vigier.jpg" alt="Mélodie -24kg" class="rounded mb-2">
+        <p class="text-center font-semibold">Mélodie -24 kg</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition transform duration-300">
+        <img src="avantapres-sebastien.jpg" alt="Sébastien -18kg" class="rounded mb-2">
+        <p class="text-center font-semibold">Sébastien -18 kg</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clôture galerie Avant/Après -->
+  <section class="relative bg-cover bg-center bg-no-repeat py-16" style="background-image: url('mosaic-flou.jpg');">
+    <div class="absolute inset-0 bg-white bg-opacity-80 backdrop-blur-sm"></div>
+    <div class="relative z-10 text-center scroll-fade" id="cta-block">
+      <h3 class="text-3xl font-bold text-green-700 typing mx-auto mb-4">Et pourquoi pas vous ?</h3>
+      <p class="text-xl animate-fade-in-delay text-gray-800">Prenez rendez-vous aujourd'hui et commencez votre transformation ✨</p>
+      <a href="https://booking.mobminder.com/ozoirlaferriere/" target="_blank" class="inline-block mt-6 bg-green-600 text-white py-3 px-6 rounded-full shadow hover:bg-green-700 transition">Je prends mon rendez-vous</a>
+    </div>
+  </section>
+
+  <!-- Méthode Dietplus -->
+  <section class="p-8 bg-green-50 text-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6 text-green-700 animate-pulse">La méthode Dietplus</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Rééquilibrage alimentaire</h3>
+          <p>Un plan personnalisé, sans frustration, adapté à votre quotidien pour une perte de poids naturelle et durable.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Suivi hebdomadaire</h3>
+          <p>Chaque semaine, un point rapide avec votre coach pour ajuster vos conseils et booster vos résultats.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Produits exclusifs</h3>
+          <p>Des compléments naturels à base de plantes pour soutenir efficacement votre perte de poids.</p>
+        </div>
+      </div>
+      <p class="mt-8 text-sm text-gray-500">En savoir plus sur <a href="https://www.dietplus.fr/notre-methode/" target="_blank" class="text-green-700 underline">le site officiel Dietplus</a>.</p>
+    </div>
+  </section>
+
+  <!-- Prise de RDV -->
+  <section class="bg-white p-6 text-center">
+    <h2 class="text-xl font-bold mb-4">Prenez rendez-vous</h2>
+    <a href="https://booking.mobminder.com/ozoirlaferriere/" target="_blank" class="inline-block bg-green-600 text-white py-2 px-4 rounded-full shadow hover:bg-green-700 transition">Réservez en ligne</a>
+  </section>
+
+  <!-- Contact -->
+  <footer class="bg-green-600 text-white p-6 mt-6">
+    <h2 class="text-lg font-semibold">Contact</h2>
+    <p>Tél : 07.82.55.75.40</p>
+    <p>Email : ozoir@dietplus.fr</p>
+    <p>69, avenue du Général de Gaulle - 77330 Ozoir-la-Ferrière</p>
+    <p>SAS LJL DIET - SIREN 812 910 404</p>
+  </footer>
+
+  <!-- Bouton WhatsApp -->
+  <a href="https://wa.me/33782557540" target="_blank"
+     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-50 transition transform hover:scale-110"
+     title="Contactez-moi sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 448 512">
+      <path d="M380.9 97.1C339.1 55.2 282.1 32 222.2 32 100 32 0 132.1 0 254.3c0 45.4 12 89.7 34.7 128.4L0 480l100.3-34.6c37.6 20.5 80.3 31.4 123 31.3h.1c121.9 0 221.9-100.1 221.9-222.3 0-59.8-23.3-116.8-65.4-157.3zM222.2 438c-37.2.1-73.8-10-105.6-29l-7.6-4.5-59.8 20.6 20.9-58.1-5-8.1c-20.1-32.7-30.7-70.5-30.6-109.3 0-110 89.4-199.4 199.5-199.4 53.3 0 103.4 20.8 141 58.6s58.2 87.7 58.2 141.1c0 110-89.3 199.4-199.3 199.4z"/>
+    </svg>
+  </a>
+
+  <!-- Script Scroll Observer -->
+  <script>
+    const scrollElements = document.querySelectorAll(".scroll-fade");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
