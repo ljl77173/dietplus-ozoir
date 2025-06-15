@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Dietplus Ozoir – Coach minceur à Ozoir-la-Ferrière</title>
+  <meta name="description" content="Découvrez la méthode Dietplus à Ozoir avec Coach Laurent. Rééquilibrage alimentaire, suivi personnalisé, résultats visibles. Prenez rendez-vous en ligne.">
+  <meta name="keywords" content="dietplus, ozoir-la-ferrière, perte de poids, rééquilibrage alimentaire, coach minceur, seine-et-marne, méthode dietplus, accompagnement nutritionnel, centre dietplus ozoir">
+  <meta name="author" content="Coach Laurent">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dietplus Ozoir - Coach Laurent</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes writing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    .typing {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid;
+      animation: writing 3s steps(30, end) forwards;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-delay {
+      animation: fadeInUp 1s ease-out 1 forwards;
+      animation-delay: 3.2s;
+    }
+    .scroll-fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .scroll-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-green-600 text-white p-8 shadow-md flex flex-col items-center gap-4 relative">
+    <img src="fanion-13ans.png" alt="13 ans à vos côtés" class="absolute top-2 left-2 h-20">
+    <img src="logo-dietplus.png" alt="Logo Dietplus" class="absolute top-2 right-2 h-20">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold">Dietplus Ozoir</h1>
+      <p class="text-xl">Avec Coach Laurent</p>
+    </div>
+    <img src="coach-laurent.jpg" alt="Coach Laurent" class="h-28 w-28 rounded-full border-4 border-white shadow-lg object-cover">
+  </header>
+
+  <!-- Accueil -->
+  <section class="p-6 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Bienvenue chez Dietplus Ozoir</h2>
+    <p class="max-w-xl mx-auto">Rejoignez une méthode personnalisée et naturelle pour atteindre vos objectifs de perte de poids, avec un accompagnement bienveillant et motivant.</p>
+  </section>
+
+  <!-- Qui suis-je -->
+  <section class="bg-white p-6">
+    <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Qui suis-je ?</h2>
+    <p class="text-center mb-6">Je suis Laurent, Coach en nutrition avec plus de 10 ans d'expérience. Mon objectif : vous aider à retrouver forme, énergie et confiance en vous grâce à la méthode Dietplus.</p>
+  </section>
+
+  <!-- Résultats -->
+  <section class="p-6 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Résultats de nos clients</h2>
+    <p class="text-center mb-6">Découvrez les transformations incroyables de nos clients avant et après leur accompagnement :</p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition transform duration-300">
+        <img src="avantapres-herbin.jpg" alt="Maryvonne -10kg" class="rounded mb-2">
+        <p class="text-center font-semibold">Maryvonne -10 kg</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition transform duration-300">
+        <img src="avantapres-vigier.jpg" alt="Mélodie -24kg" class="rounded mb-2">
+        <p class="text-center font-semibold">Mélodie -24 kg</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition transform duration-300">
+        <img src="avantapres-sebastien.jpg" alt="Sébastien -18kg" class="rounded mb-2">
+        <p class="text-center font-semibold">Sébastien -18 kg</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clôture galerie Avant/Après -->
+  <section class="relative bg-cover bg-center bg-no-repeat py-16" style="background-image: url('mosaic-flou.jpg');">
+    <div class="absolute inset-0 bg-white bg-opacity-80 backdrop-blur-sm"></div>
+    <div class="relative z-10 text-center scroll-fade" id="cta-block">
+      <h3 class="text-3xl font-bold text-green-700 typing mx-auto mb-4">Et pourquoi pas vous ?</h3>
+      <p class="text-xl animate-fade-in-delay text-gray-800">Prenez rendez-vous aujourd'hui et commencez votre transformation ✨</p>
+      <a href="https://booking.mobminder.com/ozoirlaferriere/" target="_blank" class="inline-block mt-6 bg-green-600 text-white py-3 px-6 rounded-full shadow hover:bg-green-700 transition">Je prends mon rendez-vous</a>
+    </div>
+  </section>
+
+  <!-- Méthode Dietplus -->
+  <section class="p-8 bg-green-50 text-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6 text-green-700 animate-pulse">La méthode Dietplus</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Rééquilibrage alimentaire</h3>
+          <p>Un plan personnalisé, sans frustration, adapté à votre quotidien pour une perte de poids naturelle et durable.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Suivi hebdomadaire</h3>
+          <p>Chaque semaine, un point rapide avec votre coach pour ajuster vos conseils et booster vos résultats.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Produits exclusifs</h3>
+          <p>Des compléments naturels à base de plantes pour soutenir efficacement votre perte de poids.</p>
+        </div>
+      </div>
+      <p class="mt-8 text-sm text-gray-500">En savoir plus sur <a href="https://www.dietplus.fr/notre-methode/" target="_blank" class="text-green-700 underline">le site officiel Dietplus</a>.</p>
+    </div>
+  </section>
+
+  <!-- Section Avis Clients -->
+<section class="bg-white py-12 px-4 md:px-8">
+  <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Avis de nos clients</h2>
+  <div class="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
+    
+    <!-- Avis 1 -->
+    <div class="bg-gray-100 rounded-2xl p-6 shadow-md">
+      <p class="text-gray-800 italic">"Laurent est un très bon coach en diététique. Grâce à lui mon épouse et moi-même avons atteint nos objectifs au delà de nos espérances. 🙂🙂"</p>
+      <p class="mt-4 text-sm text-gray-600">⭐️⭐️⭐️⭐️⭐️ — <strong>Erwin H.</strong>, juin 2025</p>
+    </div>
+
+    <!-- Avis 2 -->
+    <div class="bg-gray-100 rounded-2xl p-6 shadow-md">
+      <p class="text-gray-800 italic">"Je suis ravis de mon expérience avec Dietplus. Laurent est une personne très à l’écoute et attentif. J’ai perdu 13Kg et j’ai atteint mon objectif. Je recommande vivement les services de Laurent. N’hésitez pas à franchir le pas et faire confiance à Laurent. Merci encore à lui."</p>
+      <p class="mt-4 text-sm text-gray-600">⭐️⭐️⭐️⭐️⭐️ — <strong>Alexandrine F.</strong>, mai 2025</p>
+    </div>
+
+    <!-- Avis 3 -->
+    <div class="bg-gray-100 rounded-2xl p-6 shadow-md">
+      <p class="text-gray-800 italic">"Le seul coach qui a su me comprendre , me motiver, et avec lequel j’arrive enfin à obtenir des résultats. Bravo pour votre engagement et professionnalisme, un grand merci."</p>
+      <p class="mt-4 text-sm text-gray-600">⭐️⭐️⭐️⭐️⭐️ — <strong>Karine B.</strong>, mai 2025</p>
+    </div>
+
+    <!-- Avis 4 -->
+    <div class="bg-gray-100 rounded-2xl p-6 shadow-md">
+      <p class="text-gray-800 italic">"Centre très propre, Laurent est très professionnel et investi pour le suivi, les produits sont 100% d’extraits naturels. Je recommande vivement"</p>
+      <p class="mt-4 text-sm text-gray-600">⭐️⭐️⭐️⭐️⭐️ — <strong>Morgane L.</strong>, mai 2025</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Actualités Réseaux-->
+
+<section class="p-6 bg-gray-100 text-center">
+  <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Actualités</h2>
+  <p class="mb-6 text-gray-700">Suivez les dernières nouvelles, réussites et conseils partagés par Coach Laurent sur les réseaux sociaux :</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start justify-center">
+    <!-- Facebook -->
+    <div>
+      <h3 class="text-xl font-semibold text-gray-700 mb-4 text-center">Suivez-nous sur Facebook</h3>
+      <div class="flex justify-center">
+        <div class="fb-page"
+             data-href="https://www.facebook.com/DietplusOzoir"
+             data-tabs="timeline"
+             data-width="340"
+             data-height="500"
+             data-small-header="false"
+             data-adapt-container-width="true"
+             data-hide-cover="false"
+             data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/DietplusOzoir" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/DietplusOzoir">Dietplus Ozoir</a>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div>
+      <h3 class="text-xl font-semibold text-gray-700 mb-4 text-center">Suivez-nous sur Instagram</h3>
+      <div class="flex justify-center">
+        <iframe src="https://snapwidget.com/embed/1099050" class="snapwidget-widget"
+                allowtransparency="true" frameborder="0" scrolling="no"
+                style="border:none; overflow:hidden; width:100%; max-width:340px; height:500px"
+                title="Posts from Instagram">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Prise de RDV -->
+  <section class="bg-white p-6 text-center">
+    <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Prenez rendez-vous</h2>
+    <a href="https://booking.mobminder.com/ozoirlaferriere/" target="_blank" class="inline-block bg-green-600 text-white py-2 px-4 rounded-full shadow hover:bg-green-700 transition">Réservez en ligne</a>
+  </section>
+
+<section class="p-6 bg-gray-100 text-center">
+  <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Nous trouver</h2>
+  <p class="mb-4 text-gray-700">69 avenue du Général de Gaulle – 77330 Ozoir‑la‑Ferrière</p>
+  <div class="flex justify-center">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2637.313556812718!2d2.6667611156749684!3d48.76587197927601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60a8c6a0ea3cf:0x6761ab4a1ef7be53!2s69%20Av.%20du%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2C%2077330%20Ozoir-la-Ferriere!5e0!3m2!1sfr!2sfr!4v1718360150000!5m2!1sfr!2sfr"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+  <!-- Contact -->
+  <footer class="bg-green-600 text-white p-6 mt-6">
+    <h2 class="text-lg font-semibold">Contact</h2>
+    <p>Tél : 07.82.55.75.40</p>
+    <p>Email : ozoir@dietplus.fr</p>
+    <p>69, avenue du Général de Gaulle - 77330 Ozoir-la-Ferrière</p>
+    <p>SAS LJL DIET - SIREN 812 910 404</p>
+  </footer>
+
+  <!-- Bouton WhatsApp -->
+  <a href="https://wa.me/33782557540" target="_blank"
+     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-50 transition transform hover:scale-110"
+     title="Contactez-moi sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 448 512">
+      <path d="M380.9 97.1C339.1 55.2 282.1 32 222.2 32 100 32 0 132.1 0 254.3c0 45.4 12 89.7 34.7 128.4L0 480l100.3-34.6c37.6 20.5 80.3 31.4 123 31.3h.1c121.9 0 221.9-100.1 221.9-222.3 0-59.8-23.3-116.8-65.4-157.3zM222.2 438c-37.2.1-73.8-10-105.6-29l-7.6-4.5-59.8 20.6 20.9-58.1-5-8.1c-20.1-32.7-30.7-70.5-30.6-109.3 0-110 89.4-199.4 199.5-199.4 53.3 0 103.4 20.8 141 58.6s58.2 87.7 58.2 141.1c0 110-89.3 199.4-199.3 199.4z"/>
+    </svg>
+  </a>
+
+  <!-- Script Scroll Observer -->
+  <script>
+    const scrollElements = document.querySelectorAll(".scroll-fade");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v17.0"
+  nonce="Fb123XYZ"></script>
+
+</html>
