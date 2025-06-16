@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ljl77173.github.io/dietplus-ozoir/sitemap.xml
