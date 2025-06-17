@@ -1,2 +1,3 @@
-V 2.5.0
-20250615
+V 2.6.0
+20250617
+Rajout Zoom Galerie Photos
