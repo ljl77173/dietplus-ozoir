@@ -1,3 +1,7 @@
+V 2.7.0
+20250618
+Rajout de nombreuses balises
+
 V 2.6.0
 20250617
 Rajout Zoom Galerie Photos
