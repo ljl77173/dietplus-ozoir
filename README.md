@@ -1,3 +1,7 @@
+V 2.8.0
+20250620
+Rajout icone barre navigateur
+
 V 2.7.0
 20250618
 Rajout de nombreuses balises
