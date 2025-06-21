@@ -1,3 +1,7 @@
+V 3.0.0
+20250620
+Rajout Calculateur Flottant d'IMC
+
 V 2.8.0
 20250620
 Rajout icone barre navigateur
