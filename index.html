@@ -14,6 +14,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dietplus Ozoir - Coach Laurent</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     @keyframes writing {
@@ -50,10 +51,6 @@
       transform: translateY(0);
     }
   </style>
-
-  <script type="application/ld+json">
-{'@context': 'https://schema.org', '@type': 'HealthAndBeautyBusiness', 'name': 'Dietplus Ozoir', 'image': 'https://ljl77173.github.io/dietplus-ozoir/logo-dietplus.png', 'url': 'https://ljl77173.github.io/dietplus-ozoir/', 'telephone': '+33782557540', 'address': {'@type': 'PostalAddress', 'streetAddress': '69 avenue du Général de Gaulle', 'addressLocality': 'Ozoir-la-Ferrière', 'postalCode': '77330', 'addressCountry': 'FR'}, 'geo': {'@type': 'GeoCoordinates', 'latitude': 48.765872, 'longitude': 2.666761}, 'openingHours': ['Mo 09:00-18:00', 'Tu 09:00-18:00', 'We 09:00-18:00', 'Th 09:00-18:00', 'Fr 09:00-18:00', 'Sa 09:00-13:00'], 'priceRange': '€€', 'description': 'Centre Dietplus à Ozoir-la-Ferrière : perte de poids durable, rééquilibrage alimentaire personnalisé avec Coach Laurent.', 'founder': {'@type': 'Person', 'name': 'Laurent Julien'}}
-</script>
 
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -282,6 +279,103 @@
     document.getElementById("lightbox-img").src = "";
   }
 </script>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculateur IMC Flottant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #imc-widget {
+      transition: right 0.4s ease-in-out;
+    }
+    #imc-widget.closed {
+      right: -100%;
+    }
+    #imc-widget.open {
+      right: 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+<!-- Bouton flottant -->
+<button onclick="toggleIMCWidget()" class="fixed bottom-24 right-6 bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-700 transition z-50">
+  Calculer mon IMC
+</button>
+
+<!-- Encart latéral -->
+<div id="imc-widget" class="fixed top-0 bottom-0 right-0 w-full max-w-md bg-white shadow-2xl p-6 closed z-40 overflow-auto">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-xl font-bold text-green-700">Calculez votre IMC</h2>
+    <button onclick="toggleIMCWidget()" class="text-2xl font-bold text-gray-600 hover:text-red-500">&times;</button>
+  </div>
+  <p class="mb-4 text-sm text-gray-600">L’IMC permet d’évaluer votre corpulence selon votre taille et votre poids.</p>
+
+  <div>
+    <label for="taille" class="block text-sm font-medium text-gray-700 mb-1">Taille (cm)</label>
+    <input type="number" id="taille" class="w-full border rounded px-3 py-2 mb-4" placeholder="ex : 170">
+
+    <label for="poids" class="block text-sm font-medium text-gray-700 mb-1">Poids (kg)</label>
+    <input type="number" id="poids" class="w-full border rounded px-3 py-2 mb-4" placeholder="ex : 65">
+
+    <button onclick="calculIMC()" class="bg-green-600 text-white px-4 py-2 rounded shadow hover:bg-green-700 transition w-full">
+      Calculer
+    </button>
+
+    <div id="resultat-imc" class="mt-4 text-center font-semibold text-gray-800"></div>
+
+    <div id="rdv-btn" class="mt-6 hidden text-center">
+      <a href="https://booking.mobminder.com/ozoirlaferriere/" target="_blank"
+         class="inline-block bg-green-600 text-white px-4 py-2 rounded-full shadow hover:bg-green-700 transition">
+        Prendre rendez-vous
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleIMCWidget() {
+    const widget = document.getElementById("imc-widget");
+    widget.classList.toggle("open");
+    widget.classList.toggle("closed");
+  }
+
+  function calculIMC() {
+    const taille = parseFloat(document.getElementById('taille').value);
+    const poids = parseFloat(document.getElementById('poids').value);
+    const result = document.getElementById('resultat-imc');
+    const rdvBtn = document.getElementById('rdv-btn');
+
+    if (!taille || !poids || taille <= 0 || poids <= 0) {
+      result.textContent = "Veuillez saisir des valeurs valides.";
+      rdvBtn.classList.add("hidden");
+      return;
+    }
+
+    const imc = poids / ((taille / 100) ** 2);
+    let interpretation = "";
+
+    if (imc < 18.5) interpretation = "Maigreur";
+    else if (imc < 25) interpretation = "Corpulence normale ✅";
+    else if (imc < 30) interpretation = "Surpoids ⚠️";
+    else if (imc < 35) interpretation = "Obésité modérée ⚠️";
+    else interpretation = "Obésité sévère 🚨";
+
+    result.innerHTML = `Votre IMC est de <strong>${imc.toFixed(1)}</strong><br><span class="text-green-700">${interpretation}</span>`;
+
+    if (imc >= 25) {
+      rdvBtn.classList.remove("hidden");
+    } else {
+      rdvBtn.classList.add("hidden");
+    }
+  }
+</script>
+
+</body>
+</html>
 
 </body>
 <!-- Facebook SDK -->
