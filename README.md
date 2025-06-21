@@ -4,7 +4,7 @@ Rajout icone barre navigateur
 
 V 2.7.0
 20250618
-Rajout de nombreuses balises
+Rajout de balise SEO Optimized
 
 V 2.6.0
 20250617
