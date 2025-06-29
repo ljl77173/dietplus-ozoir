@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dietplus Ozoir - Coach Laurent</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    #contact-form-widget {
+      transition: right 0.4s ease-in-out;
+    }
+    #contact-form-widget.closed {
+      right: -100%;
+    }
+    #contact-form-widget.open {
+      right: 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
 <title>Dietplus Ozoir – Coach minceur à Ozoir-la-Ferrière (77330)</title>
   <meta name="description" content="Laurent, coach Dietplus à Ozoir-la-Ferrière, vous aide à perdre du poids durablement grâce à un rééquilibrage alimentaire personnalisé, un accompagnement bienveillant et des résultats visibles rapidement.">
   <meta name="keywords" content="dietplus, ozoir-la-ferrière, perte de poids, coach minceur, rééquilibrage alimentaire, régime personnalisé, nutrition, Seine-et-Marne, Laurent coach, diététique naturelle, transformation avant/après, accompagnement minceur 77330, méthode dietplus, programme minceur naturel, coach nutritionnel">
@@ -121,22 +143,6 @@
   ]
 }
 </script>
-
-<meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dietplus Ozoir - Coach Laurent</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    #contact-form-widget {
-      transition: right 0.4s ease-in-out;
-    }
-    #contact-form-widget.closed {
-      right: -100%;
-    }
-    #contact-form-widget.open {
-      right: 0;
-    }
-  </style>
 
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -315,7 +321,9 @@
       <h2 class="text-xl font-bold text-green-700">Formulaire de contact</h2>
       <button onclick="toggleContactForm()" class="text-2xl font-bold text-gray-600 hover:text-red-500">&times;</button>
     </div>
-    <form action="https://formsubmit.io/send/ozoir@dietplus.fr" method="POST" class="space-y-4" onsubmit="afficherConfirmation(event)">
+    <form action="https://formsubmit.co/ozoir@dietplus.fr" method="POST" class="space-y-4" onsubmit="afficherConfirmation(event)">
+      <input type="hidden" name="_subject" value="Demande d'informations en provenance du site Dietplus Ozoir">
+      <input type="text" name="_honey" style="display:none">
       <input type="text" name="Nom" placeholder="Votre nom" required class="w-full border px-4 py-2 rounded">
       <input type="email" name="Email" placeholder="Votre email" required class="w-full border px-4 py-2 rounded">
       <input type="tel" name="Téléphone" placeholder="Votre téléphone" class="w-full border px-4 py-2 rounded">
@@ -326,6 +334,23 @@
       Merci pour votre demande. Nous vous contacterons très rapidement afin de répondre à toutes vos questions.<br>— Laurent, Coach Dietplus Ozoir
     </p>
   </div>
+
+  <script>
+    function toggleContactForm() {
+      const widget = document.getElementById("contact-form-widget");
+      widget.classList.toggle("open");
+      widget.classList.toggle("closed");
+    }
+
+    function afficherConfirmation(event) {
+      event.preventDefault();
+      const form = event.target;
+      form.style.display = 'none';
+      document.getElementById('confirmation-message').classList.remove('hidden');
+      setTimeout(() => toggleContactForm(), 5000);
+    }
+  </script>
+
 
 
 <!-- Google Maps -->
@@ -487,21 +512,6 @@
   }
 </script>
 
-<script>
-    function toggleContactForm() {
-      const widget = document.getElementById("contact-form-widget");
-      widget.classList.toggle("open");
-      widget.classList.toggle("closed");
-    }
-
-    function afficherConfirmation(event) {
-      event.preventDefault();
-      const form = event.target;
-      form.style.display = 'none';
-      document.getElementById('confirmation-message').classList.remove('hidden');
-    }
-  </script>
-  
 </body>
 </html>
 
