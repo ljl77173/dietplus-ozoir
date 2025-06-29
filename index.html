@@ -122,6 +122,22 @@
 }
 </script>
 
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dietplus Ozoir - Coach Laurent</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    #contact-form-widget {
+      transition: right 0.4s ease-in-out;
+    }
+    #contact-form-widget.closed {
+      right: -100%;
+    }
+    #contact-form-widget.open {
+      right: 0;
+    }
+  </style>
+
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -280,13 +296,40 @@
 </section>
 
 
-<!-- Prise de RDV -->
+<!-- Prise de RDV + Contact -->
   <section class="bg-white p-6 text-center">
-    <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Prenez rendez-vous</h2>
-    <a href="https://booking.mobminder.com/ozoirlaferriere/" target="_blank" class="inline-block bg-green-600 text-white py-2 px-4 rounded-full shadow hover:bg-green-700 transition">Réservez en ligne</a>
+    <h2 class="text-xl font-bold mb-4">Nous contacter</h2>
+    <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+      <a href="https://booking.mobminder.com/ozoirlaferriere/" target="_blank" class="inline-block bg-green-600 text-white py-2 px-4 rounded-full shadow hover:bg-green-700 transition">
+        Réservez en ligne
+      </a>
+      <button onclick="toggleContactForm()" class="inline-block bg-green-500 text-white py-2 px-4 rounded-full shadow hover:bg-green-600 transition">
+        Demande d'informations
+      </button>
+    </div>
   </section>
 
-<section class="p-6 bg-gray-100 text-center">
+  <!-- Formulaire de contact flottant -->
+  <div id="contact-form-widget" class="fixed top-0 bottom-0 right-0 w-full max-w-md bg-white shadow-2xl p-6 closed z-50 overflow-auto">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-bold text-green-700">Formulaire de contact</h2>
+      <button onclick="toggleContactForm()" class="text-2xl font-bold text-gray-600 hover:text-red-500">&times;</button>
+    </div>
+    <form action="https://formsubmit.io/send/ozoir@dietplus.fr" method="POST" class="space-y-4" onsubmit="afficherConfirmation(event)">
+      <input type="text" name="Nom" placeholder="Votre nom" required class="w-full border px-4 py-2 rounded">
+      <input type="email" name="Email" placeholder="Votre email" required class="w-full border px-4 py-2 rounded">
+      <input type="tel" name="Téléphone" placeholder="Votre téléphone" class="w-full border px-4 py-2 rounded">
+      <textarea name="Message" rows="5" placeholder="Votre message..." required class="w-full border px-4 py-2 rounded"></textarea>
+      <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded shadow hover:bg-green-700 transition">Envoyer</button>
+    </form>
+    <p id="confirmation-message" class="mt-4 text-green-700 font-medium hidden">
+      Merci pour votre demande. Nous vous contacterons très rapidement afin de répondre à toutes vos questions.<br>— Laurent, Coach Dietplus Ozoir
+    </p>
+  </div>
+
+
+<!-- Google Maps -->
+  <section class="p-6 bg-gray-100 text-center">
   <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Nous trouver</h2>
   <p class="mb-4 text-gray-700">69 avenue du Général de Gaulle – 77330 Ozoir‑la‑Ferrière</p>
   <div class="flex justify-center">
@@ -444,6 +487,21 @@
   }
 </script>
 
+<script>
+    function toggleContactForm() {
+      const widget = document.getElementById("contact-form-widget");
+      widget.classList.toggle("open");
+      widget.classList.toggle("closed");
+    }
+
+    function afficherConfirmation(event) {
+      event.preventDefault();
+      const form = event.target;
+      form.style.display = 'none';
+      document.getElementById('confirmation-message').classList.remove('hidden');
+    }
+  </script>
+  
 </body>
 </html>
 
