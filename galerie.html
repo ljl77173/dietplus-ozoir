@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galerie - Dietplus Ozoir</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-green-600 text-white p-6 shadow-md text-center">
+    <h1 class="text-3xl font-bold">Galerie Multimédia</h1>
+    <p class="text-lg">Photos du centre · Vidéos · Recettes Dietplus</p>
+  </header>
+
+  <!-- Section photos du centre -->
+<section class="p-6">
+  <h2 class="text-2xl font-bold mb-4 text-center text-green-700">📸 Notre centre</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
+
+    <div class="sm:col-span-2 md:col-span-1 flex flex-col items-center">
+        <p class="text-sm text-gray-700 mb-1 font-medium">Face à l'église se trouve ...</p>
+        <img src="eglise.jpeg" alt="Eglise Ozoir"
+       class="rounded shadow w-1/2 md:w-2/3">
+    </div>
+
+    <div>
+      <p class="text-sm text-gray-700 mb-1 font-medium">... votre Centre Dietplus</p>
+      <img src="facade.jpeg" alt="Dietplus Ozoir facade" class="rounded shadow">
+    </div>
+
+    <div>
+      <p class="text-sm text-gray-700 mb-1 font-medium">Centre Leader depuis 2017</p>
+      <img src="leader.jpeg" alt="Centre Leader" class="rounded shadow">
+    </div>
+
+    <div>
+      <p class="text-sm text-gray-700 mb-1 font-medium">Quelques produits</p>
+      <img src="etagere.jpeg" alt="Produits Dietplus" class="rounded shadow">
+    </div>
+
+    <div>
+      <p class="text-sm text-gray-700 mb-1 font-medium">Le bureau</p>
+      <img src="bureau.jpeg" alt="Bureau Dietplus Ozoir" class="rounded shadow">
+    </div>
+
+    <div class="sm:col-span-2 md:col-span-1 flex flex-col items-center">
+        <p class="text-sm text-gray-700 mb-1 font-medium">La balance à Impédancemétrie</p>
+        <img src="balance.jpeg" alt="Balance professionnelle"
+       class="rounded shadow w-1/2 md:w-2/3">
+    </div>
+
+</section>
+
+
+  <!-- Section vidéos YouTube -->
+<section class="p-6 bg-gray-100">
+  <h2 class="text-2xl font-bold mb-4 text-center text-green-700">🎥 Nos vidéos</h2>
+  <div class="grid md:grid-cols-2 gap-6 justify-items-center">
+
+    <div class="w-full text-center">
+      <iframe class="w-full h-[450px] rounded shadow mb-2"
+              src="https://www.youtube.com/embed/9y9MlbNVXj8"
+              frameborder="0" allowfullscreen></iframe>
+      <p class="text-sm text-gray-600 italic">La Méthode Dietplus</p>
+    </div>
+
+    <div class="w-full text-center">
+      <iframe class="w-full h-[450px] rounded shadow mb-2"
+              src="https://www.youtube.com/embed/57_v-eEHMdQ"
+              frameborder="0" allowfullscreen></iframe>
+      <p class="text-sm text-gray-600 italic">Témoignage</p>
+    </div>
+
+    <div class="w-full text-center">
+      <iframe class="w-full h-[450px] rounded shadow mb-2"
+              src="https://www.youtube.com/embed/MQCmOD1Xq9Y"
+              frameborder="0" allowfullscreen></iframe>
+      <p class="text-sm text-gray-600 italic">Le sucre</p>
+    </div>
+
+    <div class="w-full text-center">
+      <iframe class="w-full h-[450px] rounded shadow mb-2"
+              src="https://www.youtube.com/embed/YujsaD9WJnU"
+              frameborder="0" allowfullscreen></iframe>
+      <p class="text-sm text-gray-600 italic">G10 Malaga 2025, j'y étais 😀</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Section recettes -->
+  <section class="p-6">
+    <h2 class="text-2xl font-bold mb-4 text-center text-green-700">🍽️ Idées recettes Dietplus</h2>
+    <div class="grid md:grid-cols-3 gap-6 text-center">
+      <div onclick="openModal('Brownie.jpeg')" class="cursor-pointer bg-white p-4 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
+        <h3 class="font-semibold text-lg mb-2">Brownie léger</h3>
+        <img src="Brownie.jpeg" alt="Brownie léger" class="w-full h-40 object-cover rounded">
+      </div>
+      <div onclick="openModal('Taboule.jpeg')" class="cursor-pointer bg-white p-4 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
+        <h3 class="font-semibold text-lg mb-2">Taboulé de chou fleur</h3>
+        <img src="Taboule.jpeg" alt="Taboulé de chou fleur" class="w-full h-40 object-cover rounded">
+      </div>
+      <div onclick="openModal('Pizza.jpeg')" class="cursor-pointer bg-white p-4 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
+        <h3 class="font-semibold text-lg mb-2">Pizza Margherita</h3>
+        <img src="Pizza.jpeg" alt="Pizza Margherita" class="w-full h-40 object-cover rounded">
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal pour fiche recette -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 hidden">
+    <div class="relative max-w-3xl w-full px-4">
+      <span class="absolute top-2 right-4 text-black text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="Fiche recette" class="w-full rounded-lg shadow-lg">
+      <div class="mt-4 text-center">
+        <a id="downloadBtn" href="#" download class="bg-white text-green-700 font-semibold py-2 px-4 rounded shadow mr-2 hover:bg-gray-100">Télécharger</a>
+        <button onclick="window.print()" class="bg-white text-green-700 font-semibold py-2 px-4 rounded shadow hover:bg-gray-100">Imprimer</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center my-10">
+    <a href="index.html"
+       class="inline-block bg-green-600 text-white py-2 px-6 rounded-full shadow hover:bg-green-700 transition">
+      ⬅️ Retour à l'accueil
+    </a>
+  </div>
+
+  <footer class="bg-green-600 text-white p-4 mt-10 text-center text-sm">
+    <p>&copy; 2024 Dietplus Ozoir · Coach Laurent</p>
+  </footer>
+
+  <script>
+    function openModal(imageSrc) {
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modalImage");
+      const downloadBtn = document.getElementById("downloadBtn");
+      modal.classList.remove("hidden");
+      modalImage.src = imageSrc;
+      downloadBtn.href = imageSrc;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").classList.add("hidden");
+    }
+  </script>
+
+</body>
+</html>
