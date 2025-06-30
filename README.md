@@ -1,3 +1,7 @@
+V 3.4.0
+20250630
+Rajout Formulaire de demande renseignements et page remerciements
+
 V 3.3.0
 20250623
 Rajout head JSON-LD Google Rich Text
