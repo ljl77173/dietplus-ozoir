@@ -343,7 +343,11 @@
     }
 
     function afficherConfirmation(event) {
-      event.preventDefault();
+      form.querySelector('button[type=submit]').disabled = true;
+setTimeout(() => {
+  toggleContactForm();
+}, 5000);
+
       const form = event.target;
       form.style.display = 'none';
       document.getElementById('confirmation-message').classList.remove('hidden');
