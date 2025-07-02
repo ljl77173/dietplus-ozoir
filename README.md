@@ -10,7 +10,7 @@ V 3.3.0
 20250623
 Rajout head JSON-LD Google Rich Text
 
-V 3.2.O
+V 3.2.0
 20250623
 Nouveau Sitemap et fanion 14 ans
 
