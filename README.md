@@ -1,3 +1,7 @@
+v4.1.1
+20260622
+Correction des noms sur photos apres agrandissement
+
 V4.1.0
 20260331
 Rajout Daix et Leconte Avant/Apres
